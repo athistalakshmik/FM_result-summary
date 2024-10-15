@@ -1,0 +1,211 @@
+/*  Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+### Notes
+
+Use transparency to get the color variations necessary to match the design. Hint: look into using `hsla()`.
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 18px
+
+### Font
+
+- Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
+- Weights: 500,700,800 */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.container {
+  width: 34%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0.5rem 1rem 3rem hsl(241, 100%, 89%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.final-result {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  text-align: center;
+  padding: 1rem;
+}
+.result {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+}
+.score {
+  width: 7rem;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.score .num {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.score .number {
+  color: hsl(241, 100%, 89%);
+}
+.heading {
+  color: hsl(0, 0%, 100%);
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.para {
+  color: hsl(241, 100%, 89%);
+  font-size: 14px;
+}
+.summary {
+  padding: 1rem;
+}
+.heading-para {
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+.btn {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  border: none;
+  margin: 1rem 0;
+  padding: 8px;
+  border-radius: 11px;
+  font-weight: 700;
+}
+.span {
+  margin-left: 1.5rem;
+  color: hsl(224, 30%, 27%);
+  font-weight: 900;
+}
+span {
+  color: hsla(224, 30%, 27%, 0.7);
+  font-weight: 700;
+}
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.Verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.Visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+.reaction .span {
+  margin-left: 1rem;
+}
+.Verbal .span {
+  margin-left: 2.2rem;
+}
+.Visual .span {
+  margin-left: 2.3rem;
+}
+.process {
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  padding: 0.6rem 4.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.process:hover {
+    background: linear-gradient(
+        to bottom,
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+      );
+}
+
+@media (max-width: 834px) {
+  .container {
+    width: 80%;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .heading-para {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+    .container {
+      width: 80%;
+      grid-template-columns: 1fr;
+    }
+    .heading-para {
+      font-size: 20px;
+    }
+    .btn {
+      font-size: 15px;
+    }
+    .summary {
+      margin: auto;
+    }
+  }
+  @media (max-width: 375px) {
+    .container {
+      width: 90%;
+      grid-template-columns: 1fr;
+    }
+    .heading-para {
+      font-size: 20px;
+    }
+    .btn {
+      font-size: 15px;
+    }
+    .summary {
+      margin: auto;
+    }
+  }
